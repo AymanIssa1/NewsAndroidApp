@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.newsapp.ayman.newsapp.DetailsActivity"
+    tools:showIn="@layout/activity_details">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/news_image"
+                    android:src="@color/colorPrimaryDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:transitionName="@string/transition_news_image"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:id="@+id/news_title"
+                    tools:text="News Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:transitionName="@string/transition_news_title"
+                    android:textSize="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:paddingRight="4dp"
+                    android:paddingLeft="4dp"
+                    android:textStyle="bold"
+                    android:background="#69424242"
+                    android:textColor="@android:color/white" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/news_description"
+                tools:text="Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:padding="8dp"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.newsapp.ayman.newsapp.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <iammert.com.library.ConnectionStatusView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        app:dismissOnComplete="true" />
+
+
+    <tr.xip.errorview.ErrorView xmlns:errorview="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/error_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        errorview:ev_title="Opss"
+        errorview:ev_titleColor="@android:color/background_dark"
+        errorview:ev_subtitle="No Internet Connection"
+        errorview:ev_subtitleColor="@android:color/background_dark"
+        errorview:ev_errorImage="@drawable/error_view_cloud"
+        errorview:ev_showTitle="true"
+        errorview:ev_showSubtitle="true"
+        errorview:ev_showRetryButton="true"
+        errorview:ev_retryButtonText="Retry"
+        errorview:ev_retryButtonTextColor="@color/colorPrimary" />
+
+</RelativeLayout>
